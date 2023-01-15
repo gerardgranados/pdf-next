@@ -1,32 +1,35 @@
 import React, { useRef, useEffect } from "react";
-import { Bar } from "@antv/g2plot";
-
+import { Column } from "@ant-design/plots";
 const Chart = ({ value }) => {
-  const conref = useRef();
-  useEffect(() => {
-    const stackedBarPlot = new Bar(conref.current, {
-      data: value.reverse(),
-      isStack: true,
-      xField: "value",
-      yField: "year",
-      seriesField: "type",
-      label: {
-        // 可手动配置 label 数据标签位置
-        position: "middle", // 'left', 'middle', 'right'
-        // 可配置附加的布局方法
-        layout: [
-          // 柱形图数据标签位置自动调整
-          { type: "interval-adjust-position" },
-          // 数据标签防遮挡
-          { type: "interval-hide-overlap" },
-          // 数据标签文颜色自动调整
-          { type: "adjust-color" },
-        ],
+  const config = {
+    data: value,
+    xField: "type",
+    yField: "sales",
+    label: {
+      // 可手动配置 label 数据标签位置
+      position: "middle",
+      // 'top', 'bottom', 'middle',
+      // 配置样式
+      style: {
+        fill: "#FFFFFF",
+        opacity: 0.6,
       },
-    });
-
-    stackedBarPlot.render();
-  }, []);
-  return <div ref={conref}></div>;
+    },
+    xAxis: {
+      label: {
+        autoHide: true,
+        autoRotate: false,
+      },
+    },
+    meta: {
+      type: {
+        alias: "类别",
+      },
+      sales: {
+        alias: "销售额",
+      },
+    },
+  };
+  return <Column {...config} />;
 };
 export default Chart;

@@ -10,6 +10,15 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@ant-design/plots@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@ant-design/plots/-/plots-1.2.3.tgz#d795674540499eaaddc2c8713151f0b79d91efa8"
+  integrity sha512-0nDRlwVdDkpdsUYZoHrjBczN0qKyObjJXXX/c2BJlZriz3dpQ6xbnYUzYZD1jOr5p29V2XJ83vEFKqyFOBKQZQ==
+  dependencies:
+    "@antv/g2plot" "^2.2.11"
+    "@antv/util" "^2.0.9"
+    react-content-loader "^5.0.4"
+
 "@antv/adjust@^0.2.1":
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@antv/adjust/-/adjust-0.2.5.tgz#bb37bb4a0a87ca3f4b660848bc9ac07f02bcf5db"
@@ -141,7 +150,7 @@
     "@antv/util" "~2.0.5"
     tslib "^2.0.0"
 
-"@antv/g2plot@^2.4.23":
+"@antv/g2plot@^2.2.11", "@antv/g2plot@^2.4.23":
   version "2.4.23"
   resolved "https://registry.yarnpkg.com/@antv/g2plot/-/g2plot-2.4.23.tgz#821b5ea8a6bd60d3a66e331c26e91225a0fee419"
   integrity sha512-GnrSuUclOKYq/V1sb0WWUM37IV0VKWOA2Klq0jmfj8gLI2r3A9bFzKj+EEg8sr2Hlfo2Iztvt77HYv4laxLUSQ==
@@ -2445,6 +2454,11 @@ raw-body@2.5.1:
     http-errors "2.0.0"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-content-loader@^5.0.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-5.1.4.tgz#854bafe4415dd9de07174621375bc308edd0ebb5"
+  integrity sha512-hTq7pZi2GKCK6a9d3u6XStozm0QGCEjw8cSqQReiWnh2up6IwCha5R5TF0o6SY5qUDpByloEZEZtnFxpJyENFw==
 
 react-dom@^18.2.0:
   version "18.2.0"
